@@ -13,6 +13,8 @@ import commonStyles from '../commonStyles';
 
 import todayImage from '../../assets/imgs/today.jpg';
 
+import Task from '../components/Task';
+
 export default class TaskList extends Component {
 	render() {
 		const today = moment().locale('pt-br').format('ddd, D [de] MMMM');
@@ -27,9 +29,27 @@ export default class TaskList extends Component {
 	  		</ImageBackground>
 
 	  		<View style={styles.taskList}>
-	  			<Text>Tarefa #1</Text>
-	  			<Text>Tarefa #2</Text>
-	  			<Text>Tarefa #3</Text>
+	  			<Task desc="Comprar Livro" estimateAt={new Date()}
+	  				doneAt={new Date()}/>
+	  			<Task desc="Ler Livro" estimateAt={new Date()}/>
+
+	  			<Task desc="Comprar Livro" estimateAt={new Date()}
+	  				doneAt={new Date()}/>
+	  			<Task desc="Ler Livro" estimateAt={new Date()}/>
+
+	  			<Task desc="Comprar Livro" estimateAt={new Date()}
+	  				doneAt={new Date()}/>
+	  			<Task desc="Ler Livro" estimateAt={new Date()}/>
+
+	  			<Task desc="Comprar Livro" estimateAt={new Date()}
+	  				doneAt={new Date()}/>
+	  			<Task desc="Ler Livro" estimateAt={new Date()}/>
+
+	  			<Task desc="Comprar Livro" estimateAt={new Date()}
+	  				doneAt={new Date()}/>
+	  			<Task desc="Ler Livro" estimateAt={new Date()}/>
+
+
 	  		</View>
 	  	</View>
 	  );
@@ -51,14 +71,14 @@ const styles = StyleSheet.create({
 		justifyContent: 'flex-end'
 	},
 	title: {
-		fontFamily: commonStyles.fontFamily,
+		// fontFamily: commonStyles.fontFamily,
 		color: commonStyles.colors.secondary,
 		fontSize: 50,
 		marginLeft: 20,
 		marginBottom: 20,
 	},
 	subtitle: {
-		fontFamily: commonStyles.fontFamily,
+		// fontFamily: commonStyles.fontFamily,
 		color: commonStyles.colors.secondary,
 		fontSize: 20,
 		marginLeft: 20,
